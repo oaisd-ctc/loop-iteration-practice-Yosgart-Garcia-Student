@@ -4,6 +4,14 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        Write1ThroughN();
+        WriteEvensThrough100();
+        FindSums();
+        WriteTriangles();
+    }
+
+    public static void Write1ThroughN()
+    {
         Write1ThroughN_While(-1);
         Write1ThroughN_While(5);
         Write1ThroughN_While(0);
@@ -20,7 +28,10 @@ public class Program
         WriteNThrough1_For(5);
         WriteNThrough1_For(0);
         Console.WriteLine();
-        WriteEvensThrough100();
+    }
+
+    public static void FindSums()
+    {
         Console.WriteLine();
         FindSum(5);
         FindSum(1);
@@ -42,6 +53,10 @@ public class Program
         FindSumOfOddNumbers(25);
         FindSumOfOddNumbers(-25);
         Console.WriteLine();
+    }
+
+    public static void WriteTriangles()
+    {
         OutputRightTriangle(10);
         Console.WriteLine();
         OutputRightTriangle(-4);
