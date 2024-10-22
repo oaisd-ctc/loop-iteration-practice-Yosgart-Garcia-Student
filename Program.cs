@@ -29,13 +29,18 @@ public class Program
         Console.WriteLine();
         FindSumOfEvenNumbers(10);
         FindSumOfEvenNumbers(-5);
-        FindSumOfEvenNumbers(25);
+        FindSumOfEvenNumbers(2);
         FindSumOfEvenNumbers(0);
+        FindSumOfEvenNumbers(1);
+        FindSumOfEvenNumbers(25);
+        FindSumOfEvenNumbers(-25);
         Console.WriteLine();
         FindSumOfOddNumbers(10);
         FindSumOfOddNumbers(-5);
+        FindSumOfOddNumbers(1);
+        FindSumOfOddNumbers(2);
         FindSumOfOddNumbers(25);
-        FindSumOfOddNumbers(0);
+        FindSumOfOddNumbers(-25);
         Console.WriteLine();
         OutputRightTriangle(10);
         Console.WriteLine();
@@ -113,17 +118,77 @@ public class Program
 
     public static void FindSum(int n)
     {
+        int num = 0;
+        if(n >= 0)
+        {
+            int i = 0;
+            while(i < n)
+            {
+                i++;
+                num += i;
+            }
+        }
+        else
+        {
+            int i = -1;
+            while(i > n)
+            {
+                i--;
+                num += i;
+            }
+        }
+        Console.WriteLine($"{num} ");
         
     }
 
     public static void FindSumOfEvenNumbers(int n)
     {
+        int num = 0;
+        if(n >= 0)
+        {
+            int i = 0;
+            while(i < n)
+            {
+                i++;
+                if(i%2 == 0) num += i;
+            }
+        }
+        else
+        {
+            int i = -1;
+            while(i > n)
+            {
+                i--;
+                if(i%2 == 0) num += i;
+            }
+        }
         
+        Console.WriteLine($"{num} ");
     }
 
     public static void FindSumOfOddNumbers(int n)
     {
+        int num = 0;
+        if(n >= 0)
+        {
+            int i = 0;
+            while(i < n)
+            {
+                i++;
+                if(i%2 != 0) num += i;
+            }
+        }
+        else
+        {
+            int i = -1;
+            while(i > n)
+            {
+                i--;
+                if(i%2 != 0) num += i;
+            }
+        }
         
+        Console.WriteLine($"{num} ");
     }
 
     public static void OutputRightTriangle(int _base)
